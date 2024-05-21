@@ -34,7 +34,7 @@ align-self: stretch;
 h1 {
     color: #000;
 font-family: Inter;
-font-size: 16px;
+font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -51,6 +51,13 @@ line-height: normal;
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+
+    color: #000;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .encabezado-info{
@@ -62,14 +69,6 @@ font-weight: 600;
 line-height: normal;
 }
 
-.cuerpo-info{
-    color: #000;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
 
 .wrapper{
     flex: 0 0 0;
@@ -84,6 +83,19 @@ line-height: normal;
         max-width: calc(100% - 398px);
         flex: 1 0 0;
     }
+
+    .top-info-producto {
+        margin-top: 60px;
+    }
+
+    .precio-card {
+        font-size: 20px;
+    }
+    
+    .boton-card{
+        margin-top: 80px;
+    }
+    
 
     .wrapper{
         flex: 2 0 0;
