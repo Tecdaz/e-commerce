@@ -5,7 +5,7 @@
 
 body {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     flex-direction: column;
     align-items:center;
@@ -154,7 +154,7 @@ path{
 .contenedor-productos{
     display: flex;
     padding: 8px 16px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
     gap: 8px;
