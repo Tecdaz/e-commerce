@@ -28,7 +28,7 @@ function crearCard(info, index){
         </div>
         <div class="card-info">
             <p class="titulo-card">${info.ProductTitle}</p>
-            <p class="precio-card">2${Math.floor(Math.random() * (100000 - 20000 + 1)) + 20000}</p>
+            <p class="precio-card">${parseInt(Math.random() * 80000 + 20000)}</p>
             <a class="boton-card" href="#">Agregar al carrito</a>
         </div>
     `;
