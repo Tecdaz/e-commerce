@@ -74,7 +74,6 @@ line-height: normal;
 .icono-header{
     font-size: 40px;
     color: white;
-    cursor: pointer;
 }
 
 .icono-bolsa {
@@ -151,7 +150,6 @@ line-height: normal;
     border: 1px solid #000;
     background: #000;
 
-    cursor:pointer;
     color: #FFF;
     transition: color 0.5s ease;
 }
@@ -265,7 +263,6 @@ line-height: normal;
     height: calc(1.2em * 2); /* Ajusta según el line-height */
     line-height: 1.2em; /* Altura de línea */
 
-    cursor: pointer;
     transition: color 0.5s ease;
 }
 
@@ -428,5 +425,24 @@ svg{
     .card {
         flex: 1 1 calc(25% - 12px);
         max-width: calc(25% - 12px);
+    }
+    .icono-header{
+        cursor: pointer;
+    }
+    .boton-ordenar{
+        cursor:pointer;
+    }
+
+    .titulo-card{
+        cursor: pointer;
+    }
+
+    .contenedor-menu{
+        display: flex;
+        padding: 0px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0; 
     }
 }
