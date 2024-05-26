@@ -41,8 +41,10 @@ line-height: normal;
 
 .contenedor-tail {
     display: flex;
-align-items: center;
-gap: 8px;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+    position: relative;
 }
 
 .contenedor-menu{
@@ -297,7 +299,7 @@ gap: 8px;
 
     border-radius: 100px;
     background: #000;
-
+    flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
     font-size: 16px;
@@ -325,6 +327,82 @@ svg{
     width: 100%;
 }
 
+.carrito {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -16px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: white;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    padding: 8px 16px 8px 8px;
+    max-height: 400px;
+    gap: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  .mostrar-carrito {
+    opacity: 1;
+    transform: translatey(0);
+    pointer-events: auto;
+  }
+  
+  .lista-items-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    overflow: auto
+  }
+  
+  .item-carrito{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nombre-item-carrito {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número máximo de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+  }
+  
+  .precio-item-carrito{
+    font-weight: 700;
+  }
+  
+  .precio-item-carrito::before{
+    content: "$";
+    margin-right: 4px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .imagen-carrito{
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 56px;
+    width: 56px;
+    border-radius: 14px;
+    background-color: red;
+  }
 @media screen and (max-width: 425px) {
     .desktop{
         display: none;

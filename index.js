@@ -29,7 +29,7 @@ function crearCard(info, index){
         <div class="card-info">
             <p class="titulo-card">${info.ProductTitle}</p>
             <p class="precio-card">${parseInt(Math.random() * 80000 + 20000)}</p>
-            <a class="boton-card" href="#">Agregar al carrito</a>
+            <a class="boton-card" id="item-${index}" href="#">Agregar al carrito</a>
         </div>
     `;
 
@@ -47,14 +47,28 @@ function crearCard(info, index){
 
 function cargarProductos(listaProductos){
     let contenedor = document.getElementById('contenedor-productos');
+    const listaCarrito = document.querySelector('.lista-items-carrito');
     for(let i = 0; i < 21; i++){
         let card = crearCard(listaProductos[i], i);
         contenedor.appendChild(card);
+
+        if(i % 5 === 0){
+            const item = document.createElement('div');
+            item.classList.add('item-carrito');
+            item.innerHTML = `
+                <img src="${listaProductos[i].ImageURL}" alt="" class="imagen-carrito">
+                <p class="nombre-item-carrito">${listaProductos[i].ProductTitle}</p>
+                <p class="precio-item-carrito">${parseInt(Math.random() * 80000 + 20000)}</p>
+            `;
+            listaCarrito.appendChild(item);
+        }
     }
 }
 
 const iconoBolsa = document.querySelector('.icono-bolsa');
 iconoBolsa.addEventListener('click', () => {
+    const carrito = document.querySelector(".carrito");
+    carrito.classList.toggle("mostrar-carrito");
     iconoBolsa.classList.toggle('rotate');
     if(iconoBolsa.classList.contains('rotate')){
         iconoBolsa.classList.remove("bi-bag");
