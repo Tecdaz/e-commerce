@@ -75,6 +75,14 @@ gap: 8px;
     cursor: pointer;
 }
 
+.icono-bolsa {
+    transition: transform 0.5s ease;
+}
+
+.rotate {
+    transform: rotate3d(0,1,0, 180deg);
+}
+
 .logo {
     color: white;
     font-size: 40px;
@@ -86,6 +94,11 @@ gap: 8px;
 .list-icon {
     color: white;
     font-size: 40px;
+    transition: transform 0.5s ease;
+}
+
+.girar {
+    transform : rotate(180deg);
 }
 
 .contenedor-busqueda {

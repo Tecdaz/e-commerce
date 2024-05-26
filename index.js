@@ -52,3 +52,27 @@ function cargarProductos(listaProductos){
         contenedor.appendChild(card);
     }
 }
+
+const iconoBolsa = document.querySelector('.icono-bolsa');
+iconoBolsa.addEventListener('click', () => {
+    iconoBolsa.classList.toggle('rotate');
+    if(iconoBolsa.classList.contains('rotate')){
+        iconoBolsa.classList.remove("bi-bag");
+        iconoBolsa.classList.add("bi-bag-x");
+    }else{
+        iconoBolsa.classList.remove("bi-bag-x");
+        iconoBolsa.classList.add("bi-bag");
+    }
+});
+
+const iconoMenu = document.querySelector('.list-icon');
+iconoMenu.addEventListener('click', () => {
+    iconoMenu.classList.toggle('girar');
+    if(iconoMenu.classList.contains('girar')){
+        iconoMenu.classList.remove("bi-list");
+        iconoMenu.classList.add("bi-x-lg");
+    }else{
+        iconoMenu.classList.remove("bi-x-lg");
+        iconoMenu.classList.add("bi-list");
+    }
+});
