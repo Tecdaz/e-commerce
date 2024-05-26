@@ -81,10 +81,15 @@ iconoBolsa.addEventListener('click', () => {
 
 const iconoMenu = document.querySelector('.list-icon');
 iconoMenu.addEventListener('click', () => {
+    const body = document.querySelector('body');
+    const subMenu = document.querySelector('.contenedor-menu-mobile');
+    subMenu.classList.toggle('mostrar-contenedor-menu');
     iconoMenu.classList.toggle('girar');
+    body.classList.toggle('no-scroll');
     if(iconoMenu.classList.contains('girar')){
         iconoMenu.classList.remove("bi-list");
         iconoMenu.classList.add("bi-x-lg");
+
     }else{
         iconoMenu.classList.remove("bi-x-lg");
         iconoMenu.classList.add("bi-list");

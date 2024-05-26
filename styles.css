@@ -14,6 +14,7 @@ body {
 }
 
 header{
+    position: relative;
     display: flex;
 height: 56px;
 padding: 8px 16px;
@@ -47,6 +48,34 @@ line-height: normal;
     position: relative;
 }
 
+.contenedor-menu-mobile {
+    position: absolute;
+    top: calc(100%);
+    left: 0px;
+    width: 100vw;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    align-items: start;
+    gap: 16px;
+    flex: 1 0 0;
+    height: 100vh;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(-100vw);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 .contenedor-menu{
     display: flex;
     padding: 0px 8px;
@@ -54,10 +83,23 @@ line-height: normal;
     align-items: center;
     gap: 16px;
     flex: 1 0 0; 
+    color: white;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.mostrar-contenedor-menu{
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    
 }
 
 .item-menu {
-    color: #FFF;
+    color: black;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -437,12 +479,7 @@ svg{
         cursor: pointer;
     }
 
-    .contenedor-menu{
-        display: flex;
-        padding: 0px 8px;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        flex: 1 0 0; 
+    .item-menu{
+        color: white;
     }
 }
